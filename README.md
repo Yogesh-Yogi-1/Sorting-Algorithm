@@ -20,23 +20,49 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-
-
-
-
+\*
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by: V. Yogesh
+RegisterNumber: 212223230250
+\*
+def selection_sort(nums):
+    for i in range(len(nums)):
+        lowest_value_index=i
+        for j in range(i+1,len(nums)):
+            if nums[j]<nums[lowest_value_index]:
+                lowest_value_index=j
+        nums[i],nums[lowest_value_index]=nums[lowest_value_index],nums[i]
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
 
 ```
 ii)	#Insertion Sort
 ```
-
-
-
-
-
+\*
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by: V. Yogesh
+RegisterNumber: 212223230250
+\*
+def insertion_sort(nums):
+    for i in range(1,len(nums)):
+        item_to_insert=nums[i]
+        j=i-1
+        while j>=0 and nums[j]>item_to_insert:
+            nums[j+1]=nums[j]
+            j-=1
+            nums[j+1] = item_to_insert
+list_of_nums = eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)
 
 ```
 
 ## Output:
+### Selection sort
+![Screenshot 2023-12-30 200047](https://github.com/Yogesh-Yogi-1/Sorting-Algorithm/assets/148514598/ea54e845-c834-4ce1-abb6-ff8fb40b6ff6)
+### Insertion sort
+![Screenshot 2023-12-30 200109](https://github.com/Yogesh-Yogi-1/Sorting-Algorithm/assets/148514598/784f4a05-ff8a-452f-b5c7-25d281f1b48b)
 
 
 ## Result:
